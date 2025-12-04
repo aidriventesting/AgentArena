@@ -1,0 +1,201 @@
+/* Search Page - c4 Hard (mincss + noisy DOM + no a11y) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: serif;
+  background: #fff;
+  color: #000;
+}
+
+a {
+  color: #000;
+}
+
+.wrp-x91 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-dummy, .sep-inv, .ghost-elem, .space-elem, .phantom-node, .ftr-space, .div-elem {
+  display: none;
+}
+
+.hdr-k44 {
+  padding: 8px;
+  border-bottom: 1px solid #000;
+}
+
+.cnt-j82 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-p17, .lnk-grp-z33 {
+  display: flex;
+  gap: 16px;
+}
+
+.nest-x22 {
+  display: contents;
+}
+
+.lnk-t56 {
+  color: #000;
+  font-size: 14px;
+}
+
+.act-m99 {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-wrap-h66 {
+  display: contents;
+}
+
+.btn-p88 {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.btn-r23 {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.btn-q71 {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.mn-c88 {
+  flex: 1;
+  padding: 24px;
+}
+
+.inner-pad-z12 {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo-sec-f55 {
+  margin-bottom: 24px;
+}
+
+.ttl-a34 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.sub-x77 {
+  color: #666;
+}
+
+.frm-s66 {
+  margin-bottom: 24px;
+}
+
+.box-y99 {
+  border: 1px solid #000;
+  padding: 4px;
+  margin-bottom: 8px;
+}
+
+.inner-box-a11 {
+  display: flex;
+}
+
+.icn-w44 {
+  padding: 4px;
+  color: #666;
+}
+
+.inp-wrapper-q88 {
+  flex: 1;
+}
+
+.inp-m33 {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.act-row-d44 {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.sec-k22 {
+  margin-top: 24px;
+}
+
+.ttl-b67 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.grd-n88 {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nest-wrapper-q99 {
+  display: contents;
+}
+
+.crd-j55 {
+  padding: 8px;
+  border: 1px solid #000;
+  text-decoration: none;
+}
+
+.lbl-x44 {
+  font-size: 12px;
+}
+
+.ftr-b77 {
+  padding: 8px;
+  border-top: 1px solid #000;
+}
+
+.ftr-inner-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.loc-y88 {
+  color: #666;
+  font-size: 12px;
+}
+
+.ftr-right-z33 {
+  display: flex;
+  gap: 16px;
+}
+
+.nested-link-wrap {
+  display: contents;
+}
+
+.lnk-f44 {
+  font-size: 12px;
+  color: #666;
+}
+

@@ -1,0 +1,23 @@
+{
+  "name": "Search Page",
+  "variant": "c0",
+  "variantName": "baseline",
+  "difficulty": "easy",
+  "dimensions": {
+    "visual": "styled",
+    "dom": "clean",
+    "accessibility": "full"
+  },
+  "description": "Baseline search interface with full styling, clean semantic HTML, and complete ARIA accessibility. All three dimensions are optimal - this is the reference environment.",
+  "tasks": [
+    "Locate the main search input field",
+    "Locate the primary search button",
+    "Locate the settings icon button",
+    "Locate the sign-in button",
+    "Locate the voice search button",
+    "Locate the navigation links in header",
+    "Locate the 'Trending' quick link card",
+    "Locate the footer privacy link"
+  ]
+}
+

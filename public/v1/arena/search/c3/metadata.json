@@ -1,0 +1,22 @@
+{
+  "name": "Search Page",
+  "variant": "c3",
+  "variantName": "noisy-dom",
+  "difficulty": "medium",
+  "dimensions": {
+    "visual": "styled",
+    "dom": "noisy",
+    "accessibility": "full"
+  },
+  "description": "Search interface with full CSS styling, obfuscated class names and extra DOM nesting, but complete ARIA accessibility. Tests agent robustness to DOM complexity.",
+  "tasks": [
+    "Locate the main search input field",
+    "Locate the primary search button",
+    "Locate the settings icon button",
+    "Locate the sign-in button",
+    "Locate the voice search button",
+    "Locate the navigation links in header",
+    "Locate the 'Trending' quick link card",
+    "Locate the footer privacy link"
+  ]
+}

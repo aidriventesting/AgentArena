@@ -1,0 +1,23 @@
+{
+  "name": "Dashboard Page",
+  "variant": "c0",
+  "variantName": "baseline",
+  "difficulty": "easy",
+  "dimensions": {
+    "visual": "styled",
+    "dom": "clean",
+    "accessibility": "full"
+  },
+  "description": "Baseline email dashboard with full styling, clean semantic HTML, and complete ARIA accessibility. Features navigation sidebar, email list, and toolbar actions.",
+  "tasks": [
+    "Locate the email search input",
+    "Locate the compose button",
+    "Locate the inbox navigation item",
+    "Locate the delete button in toolbar",
+    "Locate the first unread email",
+    "Locate the star button on any email",
+    "Locate the settings button",
+    "Locate the notification button"
+  ]
+}
+

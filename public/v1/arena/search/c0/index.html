@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search - c0 Baseline</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" role="banner">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <a href="#" class="nav-link">Videos</a>
+      <a href="#" class="nav-link">Images</a>
+      <a href="#" class="nav-link">News</a>
+      <a href="#" class="nav-link">Maps</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn-icon icon-settings" aria-label="Settings" title="Settings">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
+      <button class="btn-secondary btn-signin" aria-label="Sign in to your account">Sign In</button>
+    </div>
+  </header>
+
+  <main class="main" role="main" aria-labelledby="page-title">
+    <div class="logo-container">
+      <h1 class="logo" id="page-title">Findora</h1>
+      <span class="logo-tagline">Discover anything</span>
+    </div>
+
+    <form class="search-form" action="#" method="get" role="search" aria-label="Web search">
+      <div class="search-box">
+        <span class="icon-search" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </span>
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="Search the web..." 
+          aria-label="Search query"
+          name="q"
+          id="search-input"
+          autocomplete="off"
+        >
+        <button type="button" class="btn-icon icon-voice" aria-label="Voice search" title="Search by voice">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-actions">
+        <button type="submit" class="btn-primary" aria-label="Submit search">Search</button>
+        <button type="button" class="btn-secondary" aria-label="I'm feeling lucky - go directly to first result">Feeling Lucky</button>
+      </div>
+    </form>
+
+    <section class="quick-links" aria-labelledby="quick-links-title">
+      <h2 class="quick-links-title" id="quick-links-title">Quick Links</h2>
+      <div class="quick-links-grid" role="list">
+        <a href="#" class="quick-link-card" role="listitem" aria-label="View trending topics">
+          <div class="quick-link-icon icon-trending" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
+          </div>
+          <span class="quick-link-label">Trending</span>
+        </a>
+        <a href="#" class="quick-link-card" role="listitem" aria-label="Check weather forecast">
+          <div class="quick-link-icon icon-weather" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </div>
+          <span class="quick-link-label">Weather</span>
+        </a>
+        <a href="#" class="quick-link-card" role="listitem" aria-label="Read top news stories">
+          <div class="quick-link-icon icon-news" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+              <path d="M18 14h-8"></path>
+              <path d="M15 18h-5"></path>
+              <path d="M10 6h8v4h-8V6Z"></path>
+            </svg>
+          </div>
+          <span class="quick-link-label">Top News</span>
+        </a>
+        <a href="#" class="quick-link-card" role="listitem" aria-label="View sports scores">
+          <div class="quick-link-icon icon-sports" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+          </div>
+          <span class="quick-link-label">Sports</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-section">
+      <span class="footer-location">United States</span>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#" class="footer-link">About</a>
+      <a href="#" class="footer-link">Privacy</a>
+      <a href="#" class="footer-link">Terms</a>
+      <a href="#" class="footer-link">Help</a>
+    </nav>
+  </footer>
+</body>
+</html>
+

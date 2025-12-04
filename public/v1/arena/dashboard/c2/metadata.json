@@ -1,0 +1,23 @@
+{
+  "name": "Dashboard Page",
+  "variant": "c2",
+  "variantName": "no-a11y",
+  "difficulty": "medium",
+  "dimensions": {
+    "visual": "styled",
+    "dom": "clean",
+    "accessibility": "none"
+  },
+  "description": "Email dashboard with full CSS styling and clean class names, but NO accessibility attributes. No ARIA labels, uses divs instead of semantic elements. Tests agent reliance on accessibility tree.",
+  "tasks": [
+    "Locate the email search input",
+    "Locate the compose button",
+    "Locate the inbox navigation item",
+    "Locate the delete button in toolbar",
+    "Locate the first unread email",
+    "Locate the star button on any email",
+    "Locate the settings button",
+    "Locate the notification button"
+  ]
+}
+

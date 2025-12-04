@@ -1,0 +1,23 @@
+{
+  "name": "Search Page",
+  "variant": "c4",
+  "variantName": "hard",
+  "difficulty": "hard",
+  "dimensions": {
+    "visual": "mincss",
+    "dom": "noisy",
+    "accessibility": "none"
+  },
+  "description": "Maximum difficulty search interface: minimal CSS (black/white), obfuscated class names with extra DOM nesting, and NO accessibility attributes. The ultimate stress test for UI grounding agents.",
+  "tasks": [
+    "Locate the main search input field",
+    "Locate the primary search button",
+    "Locate the settings icon button",
+    "Locate the sign-in button",
+    "Locate the voice search button",
+    "Locate the navigation links in header",
+    "Locate the 'Trending' quick link card",
+    "Locate the footer privacy link"
+  ]
+}
+

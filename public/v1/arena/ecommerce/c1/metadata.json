@@ -1,0 +1,23 @@
+{
+  "name": "E-commerce Page",
+  "variant": "c1",
+  "variantName": "no-visual",
+  "difficulty": "medium",
+  "dimensions": {
+    "visual": "mincss",
+    "dom": "clean",
+    "accessibility": "full"
+  },
+  "description": "E-commerce listing with minimal CSS (black/white only, text-only icons), clean semantic HTML, and complete ARIA accessibility. Tests agent reliance on visual styling cues.",
+  "tasks": [
+    "Locate the product search input",
+    "Locate the shopping cart button",
+    "Locate the 'Add to Cart' button for the first product",
+    "Locate the price filter inputs",
+    "Locate the sort dropdown",
+    "Locate the wishlist button on any product",
+    "Locate the 'Electronics' category filter",
+    "Locate the pagination next button"
+  ]
+}
+

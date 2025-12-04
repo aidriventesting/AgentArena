@@ -1,0 +1,22 @@
+{
+  "name": "E-commerce Page",
+  "variant": "c3",
+  "variantName": "noisy-dom",
+  "difficulty": "medium",
+  "dimensions": {
+    "visual": "styled",
+    "dom": "noisy",
+    "accessibility": "full"
+  },
+  "description": "E-commerce listing with full CSS styling, obfuscated class names and extra DOM nesting, but complete ARIA accessibility. Tests agent robustness to DOM complexity.",
+  "tasks": [
+    "Locate the product search input",
+    "Locate the shopping cart button",
+    "Locate the 'Add to Cart' button for the first product",
+    "Locate the price filter inputs",
+    "Locate the sort dropdown",
+    "Locate the wishlist button on any product",
+    "Locate the 'Electronics' category filter",
+    "Locate the pagination next button"
+  ]
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - c1 No Visual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar" role="navigation" aria-label="Main navigation">
+      <div class="sidebar-header">
+        <h1 class="app-logo">MailBox</h1>
+      </div>
+      <nav class="sidebar-nav" aria-label="Email folders">
+        <a href="#" class="nav-item active" aria-current="page">
+          <span class="nav-label">Inbox</span>
+          <span class="nav-badge" aria-label="24 unread emails">(24)</span>
+        </a>
+        <a href="#" class="nav-item" aria-label="Starred emails">
+          <span class="nav-label">Starred</span>
+        </a>
+        <a href="#" class="nav-item" aria-label="Sent emails">
+          <span class="nav-label">Sent</span>
+        </a>
+        <a href="#" class="nav-item" aria-label="Drafts, 3 drafts">
+          <span class="nav-label">Drafts</span>
+          <span class="nav-badge" aria-label="3 drafts">(3)</span>
+        </a>
+        <a href="#" class="nav-item" aria-label="Trash">
+          <span class="nav-label">Trash</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="btn-compose" aria-label="Compose new email">[+] Compose</button>
+      </div>
+    </aside>
+
+    <main class="main-content" role="main" aria-labelledby="inbox-title">
+      <header class="main-header" role="banner">
+        <form class="search-container" role="search" aria-label="Search emails">
+          <label for="email-search" class="visually-hidden">Search emails</label>
+          <input type="text" id="email-search" class="search-input" placeholder="Search emails...">
+        </form>
+        <div class="header-actions">
+          <button class="btn-icon icon-refresh" aria-label="Refresh inbox" title="Refresh">[R]</button>
+          <button class="btn-icon icon-settings" aria-label="Settings" title="Settings">[S]</button>
+          <button class="btn-icon icon-notifications" aria-label="Notifications, you have new notifications" title="Notifications">[N]*</button>
+          <span class="user-avatar" aria-label="John Doe">[JD]</span>
+        </div>
+      </header>
+
+      <div class="email-toolbar" role="toolbar" aria-label="Email actions">
+        <div class="toolbar-left">
+          <label class="checkbox-container">
+            <input type="checkbox" class="select-all-checkbox" aria-label="Select all emails">
+            All
+          </label>
+          <button class="btn-toolbar btn-archive" aria-label="Archive selected emails" title="Archive">[A]</button>
+          <button class="btn-toolbar btn-delete" aria-label="Delete selected emails" title="Delete">[D]</button>
+          <button class="btn-toolbar btn-mark-read" aria-label="Mark selected as read" title="Mark as read">[M]</button>
+        </div>
+        <div class="toolbar-right">
+          <span class="email-count" aria-live="polite">1-24 of 128</span>
+          <button class="btn-toolbar btn-prev" aria-label="Previous page" title="Previous">[<]</button>
+          <button class="btn-toolbar btn-next" aria-label="Next page" title="Next">[>]</button>
+        </div>
+      </div>
+
+      <h2 id="inbox-title" class="visually-hidden">Inbox</h2>
+      <div class="email-list" role="list" aria-label="Email messages">
+        <article class="email-item unread" role="listitem" aria-label="Unread email from Sarah Johnson">
+          <label class="checkbox-container">
+            <input type="checkbox" class="email-checkbox" aria-label="Select email from Sarah Johnson">
+          </label>
+          <button class="btn-star starred" aria-label="Starred, click to unstar" aria-pressed="true">[*]</button>
+          <div class="email-sender">Sarah Johnson</div>
+          <div class="email-content">
+            <span class="email-subject">Quarterly Report Review</span>
+            <span class="email-preview"> - Hi team, Please find attached the Q4 quarterly report...</span>
+          </div>
+          <div class="email-meta">
+            <span class="email-attachment" aria-label="Has attachment">[A]</span>
+            <time class="email-time" datetime="2024-12-04T10:42">10:42 AM</time>
+          </div>
+        </article>
+
+        <article class="email-item unread" role="listitem" aria-label="Unread email from Tech Updates">
+          <label class="checkbox-container">
+            <input type="checkbox" class="email-checkbox" aria-label="Select email from Tech Updates">
+          </label>
+          <button class="btn-star" aria-label="Not starred, click to star" aria-pressed="false">[ ]</button>
+          <div class="email-sender">Tech Updates</div>
+          <div class="email-content">
+            <span class="email-subject">New Feature Announcement</span>
+            <span class="email-preview"> - We're excited to announce our latest feature release...</span>
+          </div>
+          <div class="email-meta">
+            <time class="email-time" datetime="2024-12-04T09:15">9:15 AM</time>
+          </div>
+        </article>
+
+        <article class="email-item" role="listitem" aria-label="Email from Michael Chen">
+          <label class="checkbox-container">
+            <input type="checkbox" class="email-checkbox" aria-label="Select email from Michael Chen">
+          </label>
+          <button class="btn-star" aria-label="Not starred, click to star" aria-pressed="false">[ ]</button>
+          <div class="email-sender">Michael Chen</div>
+          <div class="email-content">
+            <span class="email-subject">Meeting Notes - Project Alpha</span>
+            <span class="email-preview"> - Here are the notes from our meeting yesterday...</span>
+          </div>
+          <div class="email-meta">
+            <span class="email-attachment" aria-label="Has attachment">[A]</span>
+            <time class="email-time" datetime="2024-12-03">Yesterday</time>
+          </div>
+        </article>
+
+        <article class="email-item" role="listitem" aria-label="Email from HR Department">
+          <label class="checkbox-container">
+            <input type="checkbox" class="email-checkbox" aria-label="Select email from HR Department">
+          </label>
+          <button class="btn-star starred" aria-label="Starred, click to unstar" aria-pressed="true">[*]</button>
+          <div class="email-sender">HR Department</div>
+          <div class="email-content">
+            <span class="email-subject">Holiday Schedule 2025</span>
+            <span class="email-preview"> - Please find the official holiday schedule for 2025...</span>
+          </div>
+          <div class="email-meta">
+            <time class="email-time" datetime="2024-12-02">Dec 2</time>
+          </div>
+        </article>
+
+        <article class="email-item" role="listitem" aria-label="Email from Emily Rodriguez">
+          <label class="checkbox-container">
+            <input type="checkbox" class="email-checkbox" aria-label="Select email from Emily Rodriguez">
+          </label>
+          <button class="btn-star" aria-label="Not starred, click to star" aria-pressed="false">[ ]</button>
+          <div class="email-sender">Emily Rodriguez</div>
+          <div class="email-content">
+            <span class="email-subject">Design Review Feedback</span>
+            <span class="email-preview"> - Great work on the latest designs! I have a few suggestions...</span>
+          </div>
+          <div class="email-meta">
+            <time class="email-time" datetime="2024-12-01">Dec 1</time>
+          </div>
+        </article>
+
+        <article class="email-item" role="listitem" aria-label="Email from Support Team">
+          <label class="checkbox-container">
+            <input type="checkbox" class="email-checkbox" aria-label="Select email from Support Team">
+          </label>
+          <button class="btn-star" aria-label="Not starred, click to star" aria-pressed="false">[ ]</button>
+          <div class="email-sender">Support Team</div>
+          <div class="email-content">
+            <span class="email-subject">Your ticket has been resolved</span>
+            <span class="email-preview"> - Ticket #4521 has been marked as resolved...</span>
+          </div>
+          <div class="email-meta">
+            <time class="email-time" datetime="2024-11-30">Nov 30</time>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+

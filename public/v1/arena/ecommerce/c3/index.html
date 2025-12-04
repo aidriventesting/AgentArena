@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce - Noisy Variant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="pg-wrap-x44">
+    <header class="hdr-m22 top-bar">
+      <div class="hdr-inner-k88">
+        <div class="brnd-wrap-a11">
+          <a href="#" class="lnk-logo brnd-txt">ShopNova</a>
+        </div>
+        <nav class="nv-z66 menu-area">
+          <div class="nv-inner-q22">
+            <span class="sp-ghost"></span>
+            <a href="#" class="nv-lnk-b33 menu-item">Categories</a>
+            <a href="#" class="nv-lnk-b33 menu-item">Deals</a>
+            <div class="nest-x11">
+              <a href="#" class="nv-lnk-b33 menu-item">New Arrivals</a>
+            </div>
+          </div>
+        </nav>
+        <div class="act-z99 hdr-right">
+          <div class="srch-wrap-p44">
+            <div class="srch-inner-m11 search-container">
+              <input type="text" class="inp-q77 search-field" placeholder="Search products...">
+              <button class="btn-k33 icn-type search-btn" aria-label="Search">
+                <span class="icn-wrap-a22">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="M21 21l-4.35-4.35"></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <span class="phantom-elem"></span>
+          <button class="btn-k33 icn-type user-btn" aria-label="Account">
+            <span class="icn-wrap-a22">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </span>
+          </button>
+          <div class="cart-wrap-nested">
+            <button class="btn-k33 icn-type cart-btn" aria-label="Shopping cart">
+              <span class="icn-wrap-a22">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+              </span>
+              <span class="bdg-y88 cart-count">3</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="mn-b55 content-main">
+      <aside class="sdbr-j44 filters-panel">
+        <div class="flt-wrap-x11">
+          <div class="flt-sec-m33 filter-block">
+            <div class="ttl-wrap-z22">
+              <h3 class="ttl-p88 section-head">Categories</h3>
+            </div>
+            <ul class="lst-n66 cat-list">
+              <li class="lst-item-x11"><a href="#" class="flt-lnk-a44 cat-link active">All Products</a></li>
+              <li class="lst-item-x11"><a href="#" class="flt-lnk-a44 cat-link electronics-cat">Electronics</a></li>
+              <li class="lst-item-x11"><a href="#" class="flt-lnk-a44 cat-link">Clothing</a></li>
+              <div class="nest-wrapper-q88">
+                <li class="lst-item-x11"><a href="#" class="flt-lnk-a44 cat-link">Home & Garden</a></li>
+              </div>
+              <li class="lst-item-x11"><a href="#" class="flt-lnk-a44 cat-link">Sports</a></li>
+            </ul>
+          </div>
+          <div class="flt-sec-m33 filter-block">
+            <div class="ttl-wrap-z22">
+              <h3 class="ttl-p88 section-head">Price Range</h3>
+            </div>
+            <div class="prc-row-b66 price-inputs-wrap">
+              <input type="number" class="inp-s44 prc-inp min-price-field" placeholder="Min">
+              <span class="sep-x22">-</span>
+              <input type="number" class="inp-s44 prc-inp max-price-field" placeholder="Max">
+            </div>
+            <div class="btn-wrap-m99">
+              <button class="btn-r55 sec-type apply-filter-btn">Apply</button>
+            </div>
+          </div>
+          <div class="flt-sec-m33 filter-block">
+            <div class="ttl-wrap-z22">
+              <h3 class="ttl-p88 section-head">Rating</h3>
+            </div>
+            <div class="rtg-wrap-q44 rating-options">
+              <label class="rtg-opt-b22 rating-row">
+                <input type="checkbox" class="chk-j11 rating-check">
+                <span class="str-y99">★★★★★</span> & up
+              </label>
+              <label class="rtg-opt-b22 rating-row">
+                <input type="checkbox" class="chk-j11 rating-check">
+                <span class="str-y99">★★★★☆</span> & up
+              </label>
+              <label class="rtg-opt-b22 rating-row">
+                <input type="checkbox" class="chk-j11 rating-check">
+                <span class="str-y99">★★★☆☆</span> & up
+              </label>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="prd-sec-k77 products-area">
+        <div class="prd-hdr-z44 listing-header">
+          <div class="ttl-area-x11">
+            <h1 class="ttl-m22 page-title">All Products</h1>
+          </div>
+          <div class="ctrl-wrap-p88 header-controls">
+            <span class="cnt-b44 result-text">128 results</span>
+            <div class="srt-wrap-nested">
+              <select class="sel-q66 sort-dropdown">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Best Rating</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="grd-z88 product-grid">
+          <article class="crd-a55 product-item">
+            <div class="img-wrap-m22 product-visual">
+              <img src="https://placehold.co/280x280/e8e8e8/666?text=Product+1" alt="Wireless Headphones">
+              <div class="wsh-wrap-x11">
+                <button class="btn-wsh-k44 wishlist-action" aria-label="Add to wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="inf-wrap-q77 product-details">
+              <div class="nm-wrap-x22">
+                <h2 class="nm-z44 item-name">Wireless Headphones Pro</h2>
+              </div>
+              <div class="rtg-row-b11 item-rating">
+                <span class="str-y99">★★★★★</span>
+                <span class="cnt-m88">(234)</span>
+              </div>
+              <div class="prc-row-a66 item-price">
+                <span class="prc-curr-x22 current">$149.99</span>
+                <span class="prc-old-k44 original">$199.99</span>
+              </div>
+              <div class="btn-area-z99">
+                <button class="btn-p44 prim-type add-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="crd-a55 product-item">
+            <div class="img-wrap-m22 product-visual">
+              <img src="https://placehold.co/280x280/e8e8e8/666?text=Product+2" alt="Smart Watch">
+              <span class="bdg-m44 sale-badge">Sale</span>
+              <div class="wsh-wrap-x11">
+                <button class="btn-wsh-k44 wishlist-action" aria-label="Add to wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="inf-wrap-q77 product-details">
+              <div class="nm-wrap-x22">
+                <h2 class="nm-z44 item-name">Smart Watch Series X</h2>
+              </div>
+              <div class="rtg-row-b11 item-rating">
+                <span class="str-y99">★★★★☆</span>
+                <span class="cnt-m88">(89)</span>
+              </div>
+              <div class="prc-row-a66 item-price">
+                <span class="prc-curr-x22 current">$299.00</span>
+              </div>
+              <div class="btn-area-z99">
+                <button class="btn-p44 prim-type add-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="crd-a55 product-item">
+            <div class="img-wrap-m22 product-visual">
+              <img src="https://placehold.co/280x280/e8e8e8/666?text=Product+3" alt="Running Shoes">
+              <div class="wsh-wrap-x11">
+                <button class="btn-wsh-k44 wishlist-action" aria-label="Add to wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="inf-wrap-q77 product-details">
+              <div class="nm-wrap-x22">
+                <h2 class="nm-z44 item-name">Ultra Running Shoes</h2>
+              </div>
+              <div class="rtg-row-b11 item-rating">
+                <span class="str-y99">★★★★★</span>
+                <span class="cnt-m88">(567)</span>
+              </div>
+              <div class="prc-row-a66 item-price">
+                <span class="prc-curr-x22 current">$89.99</span>
+              </div>
+              <div class="btn-area-z99">
+                <button class="btn-p44 prim-type add-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="crd-a55 product-item">
+            <div class="img-wrap-m22 product-visual">
+              <img src="https://placehold.co/280x280/e8e8e8/666?text=Product+4" alt="Backpack">
+              <span class="bdg-m44 new-badge">New</span>
+              <div class="wsh-wrap-x11">
+                <button class="btn-wsh-k44 wishlist-action" aria-label="Add to wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="inf-wrap-q77 product-details">
+              <div class="nm-wrap-x22">
+                <h2 class="nm-z44 item-name">Travel Backpack Pro</h2>
+              </div>
+              <div class="rtg-row-b11 item-rating">
+                <span class="str-y99">★★★★☆</span>
+                <span class="cnt-m88">(45)</span>
+              </div>
+              <div class="prc-row-a66 item-price">
+                <span class="prc-curr-x22 current">$79.00</span>
+                <span class="prc-old-k44 original">$99.00</span>
+              </div>
+              <div class="btn-area-z99">
+                <button class="btn-p44 prim-type add-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="crd-a55 product-item">
+            <div class="img-wrap-m22 product-visual">
+              <img src="https://placehold.co/280x280/e8e8e8/666?text=Product+5" alt="Desk Lamp">
+              <div class="wsh-wrap-x11">
+                <button class="btn-wsh-k44 wishlist-action" aria-label="Add to wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="inf-wrap-q77 product-details">
+              <div class="nm-wrap-x22">
+                <h2 class="nm-z44 item-name">LED Desk Lamp</h2>
+              </div>
+              <div class="rtg-row-b11 item-rating">
+                <span class="str-y99">★★★★★</span>
+                <span class="cnt-m88">(312)</span>
+              </div>
+              <div class="prc-row-a66 item-price">
+                <span class="prc-curr-x22 current">$45.99</span>
+              </div>
+              <div class="btn-area-z99">
+                <button class="btn-p44 prim-type add-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="crd-a55 product-item">
+            <div class="img-wrap-m22 product-visual">
+              <img src="https://placehold.co/280x280/e8e8e8/666?text=Product+6" alt="Coffee Maker">
+              <div class="wsh-wrap-x11">
+                <button class="btn-wsh-k44 wishlist-action" aria-label="Add to wishlist">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="inf-wrap-q77 product-details">
+              <div class="nm-wrap-x22">
+                <h2 class="nm-z44 item-name">Premium Coffee Maker</h2>
+              </div>
+              <div class="rtg-row-b11 item-rating">
+                <span class="str-y99">★★★★☆</span>
+                <span class="cnt-m88">(178)</span>
+              </div>
+              <div class="prc-row-a66 item-price">
+                <span class="prc-curr-x22 current">$129.00</span>
+              </div>
+              <div class="btn-area-z99">
+                <button class="btn-p44 prim-type add-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="pgn-wrap-b88 pagination-area">
+          <div class="pgn-inner-x44">
+            <button class="btn-pg-m22 prev-btn" disabled>Previous</button>
+            <button class="btn-pg-m22 num-btn active">1</button>
+            <button class="btn-pg-m22 num-btn">2</button>
+            <button class="btn-pg-m22 num-btn">3</button>
+            <span class="ell-z99">...</span>
+            <button class="btn-pg-m22 num-btn">12</button>
+            <button class="btn-pg-m22 next-btn">Next</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="ftr-x66 page-footer">
+      <div class="ftr-inner-wrap">
+        <div class="ftr-cnt-m44 footer-grid">
+          <div class="ftr-col-b22 footer-block">
+            <h4 class="ftr-ttl-k88 col-title">Customer Service</h4>
+            <ul class="ftr-lst-z44 link-list">
+              <li><a href="#" class="ftr-lnk-a99 footer-nav-link">Contact Us</a></li>
+              <li><a href="#" class="ftr-lnk-a99 footer-nav-link">FAQs</a></li>
+              <li><a href="#" class="ftr-lnk-a99 footer-nav-link">Shipping Info</a></li>
+              <li><a href="#" class="ftr-lnk-a99 footer-nav-link">Returns</a></li>
+            </ul>
+          </div>
+          <div class="ftr-col-b22 footer-block">
+            <h4 class="ftr-ttl-k88 col-title">About</h4>
+            <ul class="ftr-lst-z44 link-list">
+              <li><a href="#" class="ftr-lnk-a99 footer-nav-link">Our Story</a></li>
+              <li><a href="#" class="ftr-lnk-a99 footer-nav-link">Careers</a></li>
+              <li><a href="#" class="ftr-lnk-a99 footer-nav-link">Press</a></li>
+            </ul>
+          </div>
+          <div class="ftr-col-b22 footer-block">
+            <h4 class="ftr-ttl-k88 col-title">Legal</h4>
+            <ul class="ftr-lst-z44 link-list">
+              <li><a href="#" class="ftr-lnk-a99 footer-nav-link privacy-link">Privacy Policy</a></li>
+              <li><a href="#" class="ftr-lnk-a99 footer-nav-link">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ftr-btm-x22 footer-bottom">
+          <p class="cpr-m44 copyright-text">© 2024 ShopNova. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+

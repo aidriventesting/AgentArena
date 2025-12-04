@@ -1,0 +1,23 @@
+{
+  "name": "Dashboard Page",
+  "variant": "c1",
+  "variantName": "no-visual",
+  "difficulty": "medium",
+  "dimensions": {
+    "visual": "mincss",
+    "dom": "clean",
+    "accessibility": "full"
+  },
+  "description": "Email dashboard with minimal CSS (black/white only, text-only icons), clean semantic HTML, and complete ARIA accessibility. Tests agent reliance on visual styling cues.",
+  "tasks": [
+    "Locate the email search input",
+    "Locate the compose button",
+    "Locate the inbox navigation item",
+    "Locate the delete button in toolbar",
+    "Locate the first unread email",
+    "Locate the star button on any email",
+    "Locate the settings button",
+    "Locate the notification button"
+  ]
+}
+

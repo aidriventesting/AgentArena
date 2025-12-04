@@ -1,0 +1,23 @@
+{
+  "name": "Dashboard Page",
+  "variant": "c4",
+  "variantName": "hard",
+  "difficulty": "hard",
+  "dimensions": {
+    "visual": "mincss",
+    "dom": "noisy",
+    "accessibility": "none"
+  },
+  "description": "Maximum difficulty email dashboard: minimal CSS (black/white), obfuscated class names with extra DOM nesting, and NO accessibility attributes. The ultimate stress test for UI grounding agents.",
+  "tasks": [
+    "Locate the email search input",
+    "Locate the compose button",
+    "Locate the inbox navigation item",
+    "Locate the delete button in toolbar",
+    "Locate the first unread email",
+    "Locate the star button on any email",
+    "Locate the settings button",
+    "Locate the notification button"
+  ]
+}
+

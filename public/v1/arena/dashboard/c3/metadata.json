@@ -1,0 +1,22 @@
+{
+  "name": "Dashboard Page",
+  "variant": "c3",
+  "variantName": "noisy-dom",
+  "difficulty": "medium",
+  "dimensions": {
+    "visual": "styled",
+    "dom": "noisy",
+    "accessibility": "full"
+  },
+  "description": "Email dashboard with full CSS styling, obfuscated class names and extra DOM nesting, but complete ARIA accessibility. Tests agent robustness to DOM complexity.",
+  "tasks": [
+    "Locate the email search input",
+    "Locate the compose button",
+    "Locate the inbox navigation item",
+    "Locate the delete button in toolbar",
+    "Locate the first unread email",
+    "Locate the star button on any email",
+    "Locate the settings button",
+    "Locate the notification button"
+  ]
+}

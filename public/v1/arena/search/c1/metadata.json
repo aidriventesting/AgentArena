@@ -1,0 +1,23 @@
+{
+  "name": "Search Page",
+  "variant": "c1",
+  "variantName": "no-visual",
+  "difficulty": "medium",
+  "dimensions": {
+    "visual": "mincss",
+    "dom": "clean",
+    "accessibility": "full"
+  },
+  "description": "Search interface with minimal CSS (black/white only, no icons), clean semantic HTML, and complete ARIA accessibility. Tests agent reliance on visual styling cues.",
+  "tasks": [
+    "Locate the main search input field",
+    "Locate the primary search button",
+    "Locate the settings icon button",
+    "Locate the sign-in button",
+    "Locate the voice search button",
+    "Locate the navigation links in header",
+    "Locate the 'Trending' quick link card",
+    "Locate the footer privacy link"
+  ]
+}
+

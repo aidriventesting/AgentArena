@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce - c1 No Visual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header-content">
+      <a href="#" class="logo" aria-label="ShopNova homepage">ShopNova</a>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="#" class="nav-link">Categories</a>
+        <a href="#" class="nav-link">Deals</a>
+        <a href="#" class="nav-link">New Arrivals</a>
+      </nav>
+      <div class="header-actions">
+        <form class="search-bar" role="search" aria-label="Product search">
+          <label for="product-search" class="visually-hidden">Search products</label>
+          <input type="text" id="product-search" class="search-input" placeholder="Search products...">
+          <button type="submit" class="btn-icon icon-search" aria-label="Submit search">[Q]</button>
+        </form>
+        <button class="btn-icon icon-user" aria-label="My account" title="Account">[U]</button>
+        <button class="btn-icon icon-cart" aria-label="Shopping cart, 3 items" title="Cart">[C] 3</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" role="main">
+    <aside class="sidebar" role="complementary" aria-label="Product filters">
+      <div class="filter-section">
+        <h3 class="filter-title" id="categories-title">Categories</h3>
+        <ul class="filter-list" role="list" aria-labelledby="categories-title">
+          <li><a href="#" class="filter-link active" aria-current="page">All Products</a></li>
+          <li><a href="#" class="filter-link">Electronics</a></li>
+          <li><a href="#" class="filter-link">Clothing</a></li>
+          <li><a href="#" class="filter-link">Home & Garden</a></li>
+          <li><a href="#" class="filter-link">Sports</a></li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h3 class="filter-title" id="price-title">Price Range</h3>
+        <div class="price-inputs" role="group" aria-labelledby="price-title">
+          <label for="price-min" class="visually-hidden">Minimum price</label>
+          <input type="number" id="price-min" class="price-input price-min" placeholder="Min">
+          <span class="price-separator" aria-hidden="true">-</span>
+          <label for="price-max" class="visually-hidden">Maximum price</label>
+          <input type="number" id="price-max" class="price-input price-max" placeholder="Max">
+        </div>
+        <button class="btn-secondary btn-apply-filter" aria-label="Apply price filter">Apply</button>
+      </div>
+      <div class="filter-section">
+        <h3 class="filter-title" id="rating-title">Rating</h3>
+        <div class="rating-filters" role="group" aria-labelledby="rating-title">
+          <label class="rating-option">
+            <input type="checkbox" class="rating-checkbox" aria-label="5 stars and up">
+            5 stars & up
+          </label>
+          <label class="rating-option">
+            <input type="checkbox" class="rating-checkbox" aria-label="4 stars and up">
+            4 stars & up
+          </label>
+          <label class="rating-option">
+            <input type="checkbox" class="rating-checkbox" aria-label="3 stars and up">
+            3 stars & up
+          </label>
+        </div>
+      </div>
+    </aside>
+
+    <section class="products-section" aria-labelledby="products-title">
+      <div class="products-header">
+        <h1 class="products-title" id="products-title">All Products</h1>
+        <div class="products-controls">
+          <span class="results-count" aria-live="polite">128 results</span>
+          <label for="sort-select" class="visually-hidden">Sort products by</label>
+          <select id="sort-select" class="sort-select">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Best Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products-grid" role="list" aria-label="Product list">
+        <article class="product-card" role="listitem">
+          <div class="product-image">
+            <img src="https://placehold.co/280x280/ccc/666?text=P1" alt="Wireless Headphones Pro">
+            <button class="btn-wishlist" aria-label="Add Wireless Headphones Pro to wishlist">[+W]</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Wireless Headphones Pro</h2>
+            <div class="product-rating" aria-label="Rated 5 out of 5 stars, 234 reviews">
+              <span class="stars">5/5</span>
+              <span class="rating-count">(234)</span>
+            </div>
+            <div class="product-price">
+              <span class="price-current" aria-label="Current price $149.99">$149.99</span>
+              <span class="price-original" aria-label="Original price $199.99">$199.99</span>
+            </div>
+            <button class="btn-primary btn-add-cart" aria-label="Add Wireless Headphones Pro to cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card" role="listitem">
+          <div class="product-image">
+            <img src="https://placehold.co/280x280/ccc/666?text=P2" alt="Smart Watch Series X">
+            <span class="product-badge badge-sale" aria-label="On sale">[SALE]</span>
+            <button class="btn-wishlist" aria-label="Add Smart Watch Series X to wishlist">[+W]</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Smart Watch Series X</h2>
+            <div class="product-rating" aria-label="Rated 4 out of 5 stars, 89 reviews">
+              <span class="stars">4/5</span>
+              <span class="rating-count">(89)</span>
+            </div>
+            <div class="product-price">
+              <span class="price-current" aria-label="Price $299.00">$299.00</span>
+            </div>
+            <button class="btn-primary btn-add-cart" aria-label="Add Smart Watch Series X to cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card" role="listitem">
+          <div class="product-image">
+            <img src="https://placehold.co/280x280/ccc/666?text=P3" alt="Ultra Running Shoes">
+            <button class="btn-wishlist" aria-label="Add Ultra Running Shoes to wishlist">[+W]</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Ultra Running Shoes</h2>
+            <div class="product-rating" aria-label="Rated 5 out of 5 stars, 567 reviews">
+              <span class="stars">5/5</span>
+              <span class="rating-count">(567)</span>
+            </div>
+            <div class="product-price">
+              <span class="price-current" aria-label="Price $89.99">$89.99</span>
+            </div>
+            <button class="btn-primary btn-add-cart" aria-label="Add Ultra Running Shoes to cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card" role="listitem">
+          <div class="product-image">
+            <img src="https://placehold.co/280x280/ccc/666?text=P4" alt="Travel Backpack Pro">
+            <span class="product-badge badge-new" aria-label="New arrival">[NEW]</span>
+            <button class="btn-wishlist" aria-label="Add Travel Backpack Pro to wishlist">[+W]</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">Travel Backpack Pro</h2>
+            <div class="product-rating" aria-label="Rated 4 out of 5 stars, 45 reviews">
+              <span class="stars">4/5</span>
+              <span class="rating-count">(45)</span>
+            </div>
+            <div class="product-price">
+              <span class="price-current" aria-label="Current price $79.00">$79.00</span>
+              <span class="price-original" aria-label="Original price $99.00">$99.00</span>
+            </div>
+            <button class="btn-primary btn-add-cart" aria-label="Add Travel Backpack Pro to cart">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+
+      <nav class="pagination" role="navigation" aria-label="Pagination">
+        <button class="btn-page btn-page-prev" disabled aria-label="Previous page" aria-disabled="true">Prev</button>
+        <button class="btn-page btn-page-num active" aria-label="Page 1, current page" aria-current="page">1</button>
+        <button class="btn-page btn-page-num" aria-label="Page 2">2</button>
+        <button class="btn-page btn-page-num" aria-label="Page 3">3</button>
+        <span class="page-ellipsis" aria-hidden="true">...</span>
+        <button class="btn-page btn-page-num" aria-label="Page 12">12</button>
+        <button class="btn-page btn-page-next" aria-label="Next page">Next</button>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4 class="footer-title" id="customer-service-title">Customer Service</h4>
+        <ul class="footer-links" aria-labelledby="customer-service-title">
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+          <li><a href="#" class="footer-link">FAQs</a></li>
+          <li><a href="#" class="footer-link">Shipping Info</a></li>
+          <li><a href="#" class="footer-link">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4 class="footer-title" id="about-title">About</h4>
+        <ul class="footer-links" aria-labelledby="about-title">
+          <li><a href="#" class="footer-link">Our Story</a></li>
+          <li><a href="#" class="footer-link">Careers</a></li>
+          <li><a href="#" class="footer-link">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4 class="footer-title" id="legal-title">Legal</h4>
+        <ul class="footer-links" aria-labelledby="legal-title">
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">© 2024 ShopNova. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

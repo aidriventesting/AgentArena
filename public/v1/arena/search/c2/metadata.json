@@ -1,0 +1,23 @@
+{
+  "name": "Search Page",
+  "variant": "c2",
+  "variantName": "no-a11y",
+  "difficulty": "medium",
+  "dimensions": {
+    "visual": "styled",
+    "dom": "clean",
+    "accessibility": "none"
+  },
+  "description": "Search interface with full CSS styling and clean class names, but NO accessibility attributes. No ARIA labels, no semantic HTML elements (uses divs), no roles. Tests agent reliance on accessibility tree.",
+  "tasks": [
+    "Locate the main search input field",
+    "Locate the primary search button",
+    "Locate the settings icon button",
+    "Locate the sign-in button",
+    "Locate the voice search button",
+    "Locate the navigation links in header",
+    "Locate the 'Trending' quick link card",
+    "Locate the footer privacy link"
+  ]
+}
+
