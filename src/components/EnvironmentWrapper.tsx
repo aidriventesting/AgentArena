@@ -128,7 +128,7 @@ export default function EnvironmentWrapper({ page, variant }: EnvironmentWrapper
             </a>
           </div>
           <a
-            href={`${basePath}/index.html`}
+            href={`${basePath}/`}
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 bg-accent hover:bg-accent-dim text-background text-sm font-medium rounded-lg transition-colors flex items-center gap-2"
@@ -190,7 +190,7 @@ export default function EnvironmentWrapper({ page, variant }: EnvironmentWrapper
       {/* Iframe Container */}
       <div className="flex-1 bg-white">
         <iframe
-          src={`${basePath}/index.html`}
+          src={`${basePath}/`}
           className="w-full h-full min-h-[600px] border-0"
           title={`${metadata?.name || page} - ${variant}`}
         />
