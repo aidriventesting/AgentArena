@@ -17,7 +17,7 @@ interface EnvironmentWrapperProps {
 
 export default function EnvironmentWrapper({ page, variant }: EnvironmentWrapperProps) {
   const [metadata, setMetadata] = useState<Metadata | null>(null);
-  const basePath = `/v1/arena/${page}/${variant}`;
+  const basePath = `/snapshots/v1/arena/${page}/${variant}`;
 
   useEffect(() => {
     fetch(`${basePath}/metadata.json`)
