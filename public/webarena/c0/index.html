@@ -486,6 +486,10 @@
     </main>
 
     <script>
+        // Post ID counter for new posts
+        let postIdCounter = 100;
+
+        // User menu dropdown
         document.getElementById('user-menu-btn').addEventListener('click', function () {
             document.getElementById('user-menu').classList.toggle('show');
         });
@@ -496,14 +500,98 @@
             }
         });
 
-        document.querySelectorAll('.btn-like').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const isLiked = this.getAttribute('data-liked') === 'true';
-                this.setAttribute('data-liked', !isLiked);
-                this.classList.toggle('liked', !isLiked);
-            });
-        });
+        // Like functionality with count update
+        function initLikeButtons() {
+            document.querySelectorAll('.btn-like').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const post = this.closest('.post');
+                    const statsEl = post.querySelector('.stat-likes');
+                    const currentText = statsEl.textContent;
+                    const currentCount = parseInt(currentText.match(/\d+/)[0]);
+                    const isLiked = this.getAttribute('data-liked') === 'true';
 
+                    if (isLiked) {
+                        // Unlike
+                        this.setAttribute('data-liked', 'false');
+                        this.classList.remove('liked');
+                        statsEl.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> ${currentCount - 1} likes`;
+                    } else {
+                        // Like
+                        this.setAttribute('data-liked', 'true');
+                        this.classList.add('liked');
+                        statsEl.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> ${currentCount + 1} likes`;
+                    }
+                });
+            });
+        }
+        initLikeButtons();
+
+        // Comment functionality
+        function initCommentButtons() {
+            document.querySelectorAll('.btn-comment').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const post = this.closest('.post');
+                    let commentSection = post.querySelector('.comment-section');
+
+                    if (commentSection) {
+                        // Toggle visibility
+                        commentSection.classList.toggle('hidden');
+                    } else {
+                        // Create comment section
+                        commentSection = document.createElement('div');
+                        commentSection.className = 'comment-section';
+                        commentSection.innerHTML = `
+                            <div class="comments-list"></div>
+                            <div class="comment-form">
+                                <img src="https://i.pravatar.cc/150?u=marie" alt="Your avatar" class="avatar avatar-sm">
+                                <input type="text" class="comment-input" placeholder="Write a comment...">
+                                <button type="button" class="btn btn-sm btn-primary comment-submit">Post</button>
+                            </div>
+                        `;
+                        post.appendChild(commentSection);
+
+                        // Add submit handler
+                        const input = commentSection.querySelector('.comment-input');
+                        const submitBtn = commentSection.querySelector('.comment-submit');
+                        const list = commentSection.querySelector('.comments-list');
+
+                        const addComment = () => {
+                            const text = input.value.trim();
+                            if (text) {
+                                const comment = document.createElement('div');
+                                comment.className = 'comment';
+                                comment.innerHTML = `
+                                    <img src="https://i.pravatar.cc/150?u=marie" alt="John Doe" class="avatar avatar-sm">
+                                    <div class="comment-content">
+                                        <span class="comment-author">John Doe</span>
+                                        <p class="comment-text">${text}</p>
+                                        <span class="comment-time">Just now</span>
+                                    </div>
+                                `;
+                                list.appendChild(comment);
+                                input.value = '';
+
+                                // Update comment count
+                                const statsEl = post.querySelector('.stat-comments');
+                                const currentCount = parseInt(statsEl.textContent.match(/\d+/)[0]);
+                                statsEl.textContent = `${currentCount + 1} comments`;
+                            }
+                        };
+
+                        submitBtn.addEventListener('click', addComment);
+                        input.addEventListener('keypress', (e) => {
+                            if (e.key === 'Enter') addComment();
+                        });
+
+                        // Focus input
+                        input.focus();
+                    }
+                });
+            });
+        }
+        initCommentButtons();
+
+        // Add friend functionality
         document.querySelectorAll('.add-friend-btn').forEach(btn => {
             btn.addEventListener('click', function () {
                 this.textContent = 'Request sent';
@@ -512,13 +600,92 @@
             });
         });
 
+        // Create post functionality
         document.getElementById('create-post-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            const content = document.getElementById('post-content').value;
-            if (content.trim()) {
-                alert('Post published!');
+            const content = document.getElementById('post-content').value.trim();
+
+            if (content) {
+                postIdCounter++;
+                const postsFeed = document.getElementById('posts-feed');
+                const newPost = document.createElement('article');
+                newPost.className = 'card post new-post';
+                newPost.setAttribute('data-post-id', postIdCounter);
+                newPost.innerHTML = `
+                    <div class="post-header">
+                        <a href="profile.html" class="post-author">
+                            <img src="https://i.pravatar.cc/150?u=marie" alt="John Doe" class="avatar">
+                            <div class="author-info">
+                                <span class="author-name">John Doe</span>
+                                <span class="post-time">Just now</span>
+                            </div>
+                        </a>
+                        <button class="btn-icon post-menu" aria-label="Post options">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="19" cy="12" r="1"></circle>
+                                <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="post-content">
+                        <p>${content}</p>
+                    </div>
+                    <div class="post-stats">
+                        <span class="stat-likes">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            0 likes
+                        </span>
+                        <span class="stat-comments">0 comments</span>
+                    </div>
+                    <div class="post-actions">
+                        <button class="btn-action btn-like" data-liked="false" aria-label="Like">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            Like
+                        </button>
+                        <button class="btn-action btn-comment" aria-label="Comment">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            Comment
+                        </button>
+                        <button class="btn-action btn-share" aria-label="Share">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                            Share
+                        </button>
+                    </div>
+                `;
+
+                // Insert at top of feed
+                postsFeed.insertBefore(newPost, postsFeed.firstChild);
+
+                // Clear textarea
                 document.getElementById('post-content').value = '';
+
+                // Re-init buttons for new post
+                initLikeButtons();
+                initCommentButtons();
+
+                // Animation
+                setTimeout(() => newPost.classList.remove('new-post'), 100);
             }
+        });
+
+        // Share functionality
+        document.querySelectorAll('.btn-share').forEach(btn => {
+            btn.addEventListener('click', function () {
+                alert('Post link copied to clipboard!');
+            });
         });
     </script>
 </body>
