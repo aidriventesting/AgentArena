@@ -17,7 +17,7 @@ Social network site for web agent testing.
 
 ---
 
-## 🏠 News Feed (`index.html`)
+## 🏠 News Feed (`feed.html`)
 
 | Action | How |
 |--------|-----|

@@ -86,7 +86,7 @@ export default function WebArenaC0Page() {
                         </a>
                     </div>
                     <a
-                        href={`${basePath}/index.html`}
+                        href={`${basePath}/feed.html`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-4 py-2 bg-accent hover:bg-accent-dim text-background text-sm font-medium rounded-lg transition-colors flex items-center gap-2"
@@ -173,7 +173,7 @@ export default function WebArenaC0Page() {
             {/* Iframe Container */}
             <div className="flex-1 bg-white">
                 <iframe
-                    src={`${basePath}/index.html`}
+                    src={`${basePath}/feed.html`}
                     className="w-full h-full min-h-[700px] border-0"
                     title={metadata?.name || "DemoHub"}
                 />

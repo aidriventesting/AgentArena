@@ -11,7 +11,7 @@
     "description": "A complete social network with news feed, user profiles, messaging, notifications and settings. Baseline version with clean semantic HTML, modern styling and full accessibility.",
     "pages": [
         {
-            "path": "index.html",
+            "path": "feed.html",
             "name": "News Feed",
             "description": "Main page with posts, create post, and sidebars"
         },
@@ -46,24 +46,24 @@
             "id": "task-01",
             "description": "Login with email 'gaddour@gmail.com' and password 'password123'",
             "startPage": "login.html",
-            "expectedResult": "Redirect to index.html"
+            "expectedResult": "Redirect to feed.html"
         },
         {
             "id": "task-02",
             "description": "Create a new post with the text 'Hello everyone!'",
-            "startPage": "index.html",
+            "startPage": "feed.html",
             "expectedResult": "Post published with confirmation"
         },
         {
             "id": "task-03",
             "description": "Like the first post in the feed",
-            "startPage": "index.html",
+            "startPage": "feed.html",
             "expectedResult": "Like button becomes active (red)"
         },
         {
             "id": "task-04",
             "description": "Navigate to the profile page",
-            "startPage": "index.html",
+            "startPage": "feed.html",
             "expectedResult": "Profile page displayed"
         },
         {
@@ -87,7 +87,7 @@
         {
             "id": "task-08",
             "description": "Logout from the account",
-            "startPage": "index.html",
+            "startPage": "feed.html",
             "expectedResult": "Redirect to login.html"
         }
     ],
