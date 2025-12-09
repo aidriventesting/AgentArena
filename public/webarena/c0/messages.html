@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - DemoHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" aria-label="Back to home">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span class="logo-text">DemoHub</span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg><span>Home</span></a>
+                <a href="messages.html" class="nav-link active" aria-current="page"><svg width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg><span>Messages</span><span class="badge">3</span></a>
+                <a href="notifications.html" class="nav-link"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg><span>Notifications</span><span class="badge">5</span></a>
+            </nav>
+            <div class="header-actions">
+                <a href="profile.html" class="profile-link" aria-label="My profile"><img
+                        src="https://i.pravatar.cc/150?u=marie" alt="Profile picture" class="avatar avatar-sm"><span
+                        class="profile-name">John</span></a>
+                <div class="dropdown">
+                    <button class="btn-icon dropdown-trigger" aria-label="User menu" id="user-menu-btn"><svg width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <circle cx="19" cy="12" r="1"></circle>
+                            <circle cx="5" cy="12" r="1"></circle>
+                        </svg></button>
+                    <div class="dropdown-menu" id="user-menu" role="menu">
+                        <a href="profile.html" class="dropdown-item" role="menuitem">My Profile</a>
+                        <a href="settings.html" class="dropdown-item" role="menuitem">Settings</a>
+                        <hr class="dropdown-divider">
+                        <a href="login.html" class="dropdown-item text-danger" role="menuitem">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content messages-page">
+        <div class="messages-layout">
+            <aside class="conversations-sidebar">
+                <div class="conversations-header">
+                    <h2>Messages</h2><button class="btn-icon" aria-label="New conversation" id="new-message-btn"><svg
+                            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg></button>
+                </div>
+                <div class="conversations-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg><input type="search" placeholder="Search conversations..." id="search-conversations"></div>
+                <div class="conversations-list" id="conversations-list">
+                    <div class="conversation-item active" data-conversation="thomas" role="button" tabindex="0">
+                        <div class="avatar-wrapper"><img src="https://i.pravatar.cc/150?u=thomas" alt="Thomas Martin"
+                                class="avatar"><span class="online-indicator"></span></div>
+                        <div class="conversation-info">
+                            <div class="conversation-top"><span class="conversation-name">Thomas Martin</span><span
+                                    class="conversation-time">2:32 PM</span></div>
+                            <p class="conversation-preview">Great, see you there then!</p>
+                        </div>
+                        <span class="unread-badge">2</span>
+                    </div>
+                    <div class="conversation-item" data-conversation="sophie" role="button" tabindex="0">
+                        <div class="avatar-wrapper"><img src="https://i.pravatar.cc/150?u=sophie" alt="Sophie Bernard"
+                                class="avatar"><span class="online-indicator"></span></div>
+                        <div class="conversation-info">
+                            <div class="conversation-top"><span class="conversation-name">Sophie Bernard</span><span
+                                    class="conversation-time">12:15 PM</span></div>
+                            <p class="conversation-preview">Thanks for the feedback on my project! 🙏</p>
+                        </div>
+                    </div>
+                    <div class="conversation-item" data-conversation="lucas" role="button" tabindex="0">
+                        <div class="avatar-wrapper"><img src="https://i.pravatar.cc/150?u=lucas" alt="Lucas Moreau"
+                                class="avatar"></div>
+                        <div class="conversation-info">
+                            <div class="conversation-top"><span class="conversation-name">Lucas Moreau</span><span
+                                    class="conversation-time">Yesterday</span></div>
+                            <p class="conversation-preview">The song is finally out! 🎸</p>
+                        </div>
+                        <span class="unread-badge">1</span>
+                    </div>
+                    <div class="conversation-item" data-conversation="emma" role="button" tabindex="0">
+                        <div class="avatar-wrapper"><img src="https://i.pravatar.cc/150?u=emma" alt="Emma Laurent"
+                                class="avatar"></div>
+                        <div class="conversation-info">
+                            <div class="conversation-top"><span class="conversation-name">Emma Laurent</span><span
+                                    class="conversation-time">Mon</span></div>
+                            <p class="conversation-preview">Are we still on for brunch Saturday?</p>
+                        </div>
+                    </div>
+                    <div class="conversation-item" data-conversation="pierre" role="button" tabindex="0">
+                        <div class="avatar-wrapper"><img src="https://i.pravatar.cc/150?u=pierre" alt="Peter Smith"
+                                class="avatar"></div>
+                        <div class="conversation-info">
+                            <div class="conversation-top"><span class="conversation-name">Peter Smith</span><span
+                                    class="conversation-time">Nov 28</span></div>
+                            <p class="conversation-preview">Here are the docs you requested</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="chat-area" id="chat-area">
+                <div class="chat-header">
+                    <div class="chat-user"><img src="https://i.pravatar.cc/150?u=thomas" alt="Thomas Martin"
+                            class="avatar">
+                        <div class="chat-user-info">
+                            <h3>Thomas Martin</h3><span class="online-status">Online</span>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <button class="btn-icon" aria-label="Voice call"><svg width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg></button>
+                        <button class="btn-icon" aria-label="Video call"><svg width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                            </svg></button>
+                        <button class="btn-icon" aria-label="More options"><svg width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="5" r="1"></circle>
+                                <circle cx="12" cy="19" r="1"></circle>
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message-date">Today</div>
+                    <div class="message received"><img src="https://i.pravatar.cc/150?u=thomas" alt="Thomas"
+                            class="message-avatar">
+                        <div class="message-content">
+                            <p>Hey John! Are you free this weekend for a hike?</p><span class="message-time">10:15
+                                AM</span>
+                        </div>
+                    </div>
+                    <div class="message sent">
+                        <div class="message-content">
+                            <p>Hi Thomas! Yes, I'm free Saturday. What time do we leave?</p><span
+                                class="message-time">10:32 AM</span>
+                        </div>
+                    </div>
+                    <div class="message received"><img src="https://i.pravatar.cc/150?u=thomas" alt="Thomas"
+                            class="message-avatar">
+                        <div class="message-content">
+                            <p>Perfect! Let's meet at 8am at the lake parking lot 🏔️</p><span
+                                class="message-time">11:45 AM</span>
+                        </div>
+                    </div>
+                    <div class="message sent">
+                        <div class="message-content">
+                            <p>Sounds good! I'll bring the picnic 🥪</p><span class="message-time">12:20 PM</span>
+                        </div>
+                    </div>
+                    <div class="message received"><img src="https://i.pravatar.cc/150?u=thomas" alt="Thomas"
+                            class="message-avatar">
+                        <div class="message-content">
+                            <p>Awesome! I'll bring drinks. Sophie and Lucas are coming too.</p><span
+                                class="message-time">2:05 PM</span>
+                        </div>
+                    </div>
+                    <div class="message received"><img src="https://i.pravatar.cc/150?u=thomas" alt="Thomas"
+                            class="message-avatar">
+                        <div class="message-content">
+                            <p>Great, see you there then!</p><span class="message-time">2:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="chat-input" id="message-form">
+                    <button type="button" class="btn-icon" aria-label="Add attachment"><svg width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48">
+                            </path>
+                        </svg></button>
+                    <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off"
+                        aria-label="Message">
+                    <button type="button" class="btn-icon" aria-label="Add emoji"><svg width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        </svg></button>
+                    <button type="submit" class="btn btn-primary btn-send" aria-label="Send"><svg width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg></button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('user-menu-btn').addEventListener('click', function () { document.getElementById('user-menu').classList.toggle('show'); });
+        document.addEventListener('click', function (e) { if (!e.target.closest('.dropdown')) document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('show')); });
+        document.querySelectorAll('.conversation-item').forEach(item => { item.addEventListener('click', function () { document.querySelectorAll('.conversation-item').forEach(i => i.classList.remove('active')); this.classList.add('active'); const badge = this.querySelector('.unread-badge'); if (badge) badge.remove(); }); });
+        document.getElementById('message-form').addEventListener('submit', function (e) { e.preventDefault(); const input = document.getElementById('message-input'); const message = input.value.trim(); if (message) { const container = document.getElementById('chat-messages'); const now = new Date(); const time = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0'); container.insertAdjacentHTML('beforeend', `<div class="message sent"><div class="message-content"><p>${message}</p><span class="message-time">${time}</span></div></div>`); container.scrollTop = container.scrollHeight; input.value = ''; } });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - DemoHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" aria-label="Back to home">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span class="logo-text">DemoHub</span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg><span>Home</span></a>
+                <a href="messages.html" class="nav-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg><span>Messages</span></a>
+                <a href="notifications.html" class="nav-link"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg><span>Notifications</span></a>
+            </nav>
+            <div class="header-actions">
+                <a href="profile.html" class="profile-link" aria-label="My profile"><img
+                        src="https://i.pravatar.cc/150?u=marie" alt="Profile picture" class="avatar avatar-sm"><span
+                        class="profile-name">John</span></a>
+                <div class="dropdown">
+                    <button class="btn-icon dropdown-trigger" aria-label="User menu" id="user-menu-btn"><svg width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <circle cx="19" cy="12" r="1"></circle>
+                            <circle cx="5" cy="12" r="1"></circle>
+                        </svg></button>
+                    <div class="dropdown-menu" id="user-menu" role="menu">
+                        <a href="profile.html" class="dropdown-item" role="menuitem">My Profile</a>
+                        <a href="settings.html" class="dropdown-item active" role="menuitem">Settings</a>
+                        <hr class="dropdown-divider">
+                        <a href="login.html" class="dropdown-item text-danger" role="menuitem">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content settings-page">
+        <div class="settings-layout">
+            <aside class="settings-sidebar">
+                <nav class="settings-nav">
+                    <a href="#profile-settings" class="settings-nav-item active" data-section="profile"><svg width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>Profile</a>
+                    <a href="#account-settings" class="settings-nav-item" data-section="account"><svg width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>Account & Security</a>
+                    <a href="#privacy-settings" class="settings-nav-item" data-section="privacy"><svg width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>Privacy</a>
+                    <a href="#notification-settings" class="settings-nav-item" data-section="notifications"><svg
+                            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>Notifications</a>
+                    <a href="#appearance-settings" class="settings-nav-item" data-section="appearance"><svg width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                        </svg>Appearance</a>
+                </nav>
+            </aside>
+
+            <div class="settings-content">
+                <section class="settings-section active" id="profile-settings">
+                    <div class="section-header">
+                        <h2>Profile Settings</h2>
+                        <p>Manage your personal information and bio.</p>
+                    </div>
+                    <form class="settings-form" id="profile-form">
+                        <div class="form-group"><label for="display-name">Display Name</label><input type="text"
+                                id="display-name" name="displayName" value="John Doe"></div>
+                        <div class="form-group"><label for="username">Username</label>
+                            <div class="input-group"><span class="input-prefix">@</span><input type="text" id="username"
+                                    name="username" value="johndoe"></div>
+                        </div>
+                        <div class="form-group"><label for="bio">Bio</label><textarea id="bio" name="bio" rows="3"
+                                maxlength="160">Passionate about design and travel 🌍✨ | Web Developer | San Francisco, CA</textarea><span
+                                class="char-count"><span id="bio-count">78</span>/160</span></div>
+                        <div class="form-group"><label for="location">Location</label><input type="text" id="location"
+                                name="location" value="San Francisco, CA"></div>
+                        <div class="form-group"><label for="website">Website</label><input type="url" id="website"
+                                name="website" value="https://johndoe.design"></div>
+                        <div class="form-group"><label for="birthdate">Date of Birth</label><input type="date"
+                                id="birthdate" name="birthdate" value="1995-03-15"></div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </section>
+
+                <section class="settings-section" id="account-settings">
+                    <div class="section-header">
+                        <h2>Account & Security</h2>
+                        <p>Manage your email, password, and account security.</p>
+                    </div>
+                    <form class="settings-form" id="account-form">
+                        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email"
+                                name="email" value="gaddour@gmail.com"></div>
+                        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone"
+                                name="phone" value="+1 555 123 4567"></div>
+                        <hr class="settings-divider">
+                        <h3 class="subsection-title">Change Password</h3>
+                        <div class="form-group"><label for="current-password">Current Password</label><input
+                                type="password" id="current-password" name="currentPassword" placeholder="••••••••">
+                        </div>
+                        <div class="form-group"><label for="new-password">New Password</label><input type="password"
+                                id="new-password" name="newPassword" placeholder="••••••••"></div>
+                        <div class="form-group"><label for="confirm-password">Confirm New Password</label><input
+                                type="password" id="confirm-password" name="confirmPassword" placeholder="••••••••">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                        <hr class="settings-divider">
+                        <h3 class="subsection-title">Two-Factor Authentication</h3>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Enable 2FA</span><span
+                                    class="toggle-description">Add an extra layer of security to your account.</span>
+                            </div><label class="switch"><input type="checkbox" id="enable-2fa"><span
+                                    class="slider"></span></label>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="settings-section" id="privacy-settings">
+                    <div class="section-header">
+                        <h2>Privacy</h2>
+                        <p>Control who can see your content and contact you.</p>
+                    </div>
+                    <form class="settings-form" id="privacy-form">
+                        <div class="form-group"><label for="profile-visibility">Profile Visibility</label><select
+                                id="profile-visibility" name="profileVisibility">
+                                <option value="public">Public - Everyone can see your profile</option>
+                                <option value="friends">Friends - Only friends can see your profile</option>
+                                <option value="private">Private - Profile hidden from searches</option>
+                            </select></div>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Allow Friend Requests</span><span
+                                    class="toggle-description">Let users send you friend requests.</span></div><label
+                                class="switch"><input type="checkbox" id="allow-friend-requests" checked><span
+                                    class="slider"></span></label>
+                        </div>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Private Messages</span><span
+                                    class="toggle-description">Allow messages from non-friends.</span></div><label
+                                class="switch"><input type="checkbox" id="allow-messages"><span
+                                    class="slider"></span></label>
+                        </div>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Show Online Status</span><span
+                                    class="toggle-description">Show when you're online.</span></div><label
+                                class="switch"><input type="checkbox" id="show-online-status" checked><span
+                                    class="slider"></span></label>
+                        </div>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Search Engine Indexing</span><span
+                                    class="toggle-description">Allow Google and others to index your profile.</span>
+                            </div><label class="switch"><input type="checkbox" id="search-indexing" checked><span
+                                    class="slider"></span></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Settings</button>
+                    </form>
+                </section>
+
+                <section class="settings-section" id="notification-settings">
+                    <div class="section-header">
+                        <h2>Notification Preferences</h2>
+                        <p>Choose how and when you want to be notified.</p>
+                    </div>
+                    <form class="settings-form" id="notifications-form">
+                        <h3 class="subsection-title">Push Notifications</h3>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Likes on your posts</span></div><label
+                                class="switch"><input type="checkbox" id="notify-likes" checked><span
+                                    class="slider"></span></label>
+                        </div>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Comments</span></div><label
+                                class="switch"><input type="checkbox" id="notify-comments" checked><span
+                                    class="slider"></span></label>
+                        </div>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Mentions</span></div><label
+                                class="switch"><input type="checkbox" id="notify-mentions" checked><span
+                                    class="slider"></span></label>
+                        </div>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Friend Requests</span></div><label
+                                class="switch"><input type="checkbox" id="notify-friend-requests" checked><span
+                                    class="slider"></span></label>
+                        </div>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Messages</span></div><label
+                                class="switch"><input type="checkbox" id="notify-messages" checked><span
+                                    class="slider"></span></label>
+                        </div>
+                        <hr class="settings-divider">
+                        <h3 class="subsection-title">Email Notifications</h3>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">Weekly Summary</span><span
+                                    class="toggle-description">Get a recap of your activity every week.</span></div>
+                            <label class="switch"><input type="checkbox" id="email-weekly" checked><span
+                                    class="slider"></span></label>
+                        </div>
+                        <div class="setting-toggle">
+                            <div class="toggle-info"><span class="toggle-label">New Features</span><span
+                                    class="toggle-description">Be informed about DemoHub updates.</span></div><label
+                                class="switch"><input type="checkbox" id="email-features"><span
+                                    class="slider"></span></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Preferences</button>
+                    </form>
+                </section>
+
+                <section class="settings-section" id="appearance-settings">
+                    <div class="section-header">
+                        <h2>Appearance</h2>
+                        <p>Customize the look and feel of the app.</p>
+                    </div>
+                    <form class="settings-form" id="appearance-form">
+                        <div class="form-group"><label>Theme</label>
+                            <div class="theme-options"><label class="theme-option"><input type="radio" name="theme"
+                                        value="light" checked>
+                                    <div class="theme-preview theme-light"><span>☀️</span></div><span>Light</span>
+                                </label><label class="theme-option"><input type="radio" name="theme" value="dark">
+                                    <div class="theme-preview theme-dark"><span>🌙</span></div><span>Dark</span>
+                                </label><label class="theme-option"><input type="radio" name="theme" value="auto">
+                                    <div class="theme-preview theme-auto"><span>🔄</span></div><span>Auto</span>
+                                </label></div>
+                        </div>
+                        <div class="form-group"><label for="language">Language</label><select id="language"
+                                name="language">
+                                <option value="en" selected>English</option>
+                                <option value="fr">Français</option>
+                                <option value="es">Español</option>
+                                <option value="de">Deutsch</option>
+                            </select></div>
+                        <div class="form-group"><label for="font-size">Font Size</label><select id="font-size"
+                                name="fontSize">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                            </select></div>
+                        <button type="submit" class="btn btn-primary">Apply Changes</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('user-menu-btn').addEventListener('click', function () { document.getElementById('user-menu').classList.toggle('show'); });
+        document.addEventListener('click', function (e) { if (!e.target.closest('.dropdown')) document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('show')); });
+        document.querySelectorAll('.settings-nav-item').forEach(item => { item.addEventListener('click', function (e) { e.preventDefault(); document.querySelectorAll('.settings-nav-item').forEach(i => i.classList.remove('active')); this.classList.add('active'); const section = this.dataset.section; document.querySelectorAll('.settings-section').forEach(s => s.classList.remove('active')); document.getElementById(section + '-settings').classList.add('active'); }); });
+        document.getElementById('bio').addEventListener('input', function () { document.getElementById('bio-count').textContent = this.value.length; });
+        document.querySelectorAll('.settings-form').forEach(form => { form.addEventListener('submit', function (e) { e.preventDefault(); alert('Settings saved successfully!'); }); });
+    </script>
+</body>
+
+</html>

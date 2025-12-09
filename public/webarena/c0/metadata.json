@@ -1,0 +1,98 @@
+{
+    "name": "DemoHub - Social Network",
+    "variant": "c0",
+    "variantName": "baseline",
+    "difficulty": "easy",
+    "dimensions": {
+        "visual": "styled",
+        "dom": "clean",
+        "accessibility": "full"
+    },
+    "description": "A complete social network with news feed, user profiles, messaging, notifications and settings. Baseline version with clean semantic HTML, modern styling and full accessibility.",
+    "pages": [
+        {
+            "path": "index.html",
+            "name": "News Feed",
+            "description": "Main page with posts, create post, and sidebars"
+        },
+        {
+            "path": "login.html",
+            "name": "Login",
+            "description": "Login and registration forms"
+        },
+        {
+            "path": "profile.html",
+            "name": "Profile",
+            "description": "User profile page with posts, friends and photos"
+        },
+        {
+            "path": "messages.html",
+            "name": "Messages",
+            "description": "Messaging with conversations list and chat"
+        },
+        {
+            "path": "notifications.html",
+            "name": "Notifications",
+            "description": "Notification center with friend requests and activity"
+        },
+        {
+            "path": "settings.html",
+            "name": "Settings",
+            "description": "Profile, account, privacy and appearance settings"
+        }
+    ],
+    "tasks": [
+        {
+            "id": "task-01",
+            "description": "Login with email 'gaddour@gmail.com' and password 'password123'",
+            "startPage": "login.html",
+            "expectedResult": "Redirect to index.html"
+        },
+        {
+            "id": "task-02",
+            "description": "Create a new post with the text 'Hello everyone!'",
+            "startPage": "index.html",
+            "expectedResult": "Post published with confirmation"
+        },
+        {
+            "id": "task-03",
+            "description": "Like the first post in the feed",
+            "startPage": "index.html",
+            "expectedResult": "Like button becomes active (red)"
+        },
+        {
+            "id": "task-04",
+            "description": "Navigate to the profile page",
+            "startPage": "index.html",
+            "expectedResult": "Profile page displayed"
+        },
+        {
+            "id": "task-05",
+            "description": "Send a message to Thomas Martin with the text 'Hi Thomas!'",
+            "startPage": "messages.html",
+            "expectedResult": "Message displayed in conversation"
+        },
+        {
+            "id": "task-06",
+            "description": "Accept Mike Johnson's friend request",
+            "startPage": "notifications.html",
+            "expectedResult": "Request accepted confirmation shown"
+        },
+        {
+            "id": "task-07",
+            "description": "Update profile bio to 'New updated bio'",
+            "startPage": "profile.html",
+            "expectedResult": "Bio updated on profile"
+        },
+        {
+            "id": "task-08",
+            "description": "Logout from the account",
+            "startPage": "index.html",
+            "expectedResult": "Redirect to login.html"
+        }
+    ],
+    "testCredentials": {
+        "email": "gaddour@gmail.com",
+        "password": "password123"
+    }
+}
