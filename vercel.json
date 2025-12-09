@@ -1,0 +1,21 @@
+{
+    "buildCommand": "npm run build",
+    "outputDirectory": "out",
+    "rewrites": [
+        {
+            "source": "/webarena/c0/:path*",
+            "destination": "/webarena/c0/:path*"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/webarena/c0/(.*)",
+            "headers": [
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                }
+            ]
+        }
+    ]
+}
