@@ -3,8 +3,28 @@
     "outputDirectory": "out",
     "rewrites": [
         {
-            "source": "/webarena/c0/:path*",
-            "destination": "/webarena/c0/:path*"
+            "source": "/webarena/c0/feed.html",
+            "destination": "/webarena/c0/feed.html"
+        },
+        {
+            "source": "/webarena/c0/login.html",
+            "destination": "/webarena/c0/login.html"
+        },
+        {
+            "source": "/webarena/c0/profile.html",
+            "destination": "/webarena/c0/profile.html"
+        },
+        {
+            "source": "/webarena/c0/messages.html",
+            "destination": "/webarena/c0/messages.html"
+        },
+        {
+            "source": "/webarena/c0/notifications.html",
+            "destination": "/webarena/c0/notifications.html"
+        },
+        {
+            "source": "/webarena/c0/settings.html",
+            "destination": "/webarena/c0/settings.html"
         }
     ],
     "headers": [
@@ -12,8 +32,8 @@
             "source": "/webarena/c0/(.*)",
             "headers": [
                 {
-                    "key": "Access-Control-Allow-Origin",
-                    "value": "*"
+                    "key": "Content-Type",
+                    "value": "text/html; charset=utf-8"
                 }
             ]
         }
